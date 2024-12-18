@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,17 @@ body {
   height: 100%;
   position: relative;
   font-family: "Roboto", serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+body {
+  overflow: auto; /* Allow scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 /* start page */
@@ -28,8 +41,7 @@ body {
   position: absolute;
   overflow: hidden;
   z-index: 100;
-
-  /* display: none; */
+  display: none;
 }
 .start-cir {
   background-color: white;
@@ -166,4 +178,292 @@ body {
 .main-info p {
   font-size: 1.2rem;
   color: white;
+}
+
+/* Home about */
+#about {
+  width: 100%;
+  height: 100%;
+}
+.home-about {
+  width: 100%;
+  height: 80%;
+  padding: 4rem;
+}
+
+.about-text {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  padding: 6rem 10rem;
+}
+
+.about-text p {
+  width: 40%;
+  text-align: justify;
+  color: #1e1f21;
+  opacity: 0;
+}
+
+.about-text .p-1 {
+  width: 50%;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.about-text .p-2 {
+  width: 20%;
+}
+
+.about-svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 8rem;
+  position: relative;
+}
+
+.svg-con {
+  width: 20%;
+  height: 200px;
+  right: 5%;
+  position: absolute;
+}
+
+#work {
+  width: 100%;
+  height: 100%;
+}
+.work-section {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10rem;
+}
+
+.work-section p {
+  margin-left: 4rem;
+}
+
+.work1 {
+  width: 100%;
+  height: 20%;
+  border-top: 1px solid #999d9e;
+  border-bottom: 1px solid #999d9e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.work1-animation {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.work1-animation img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.view {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  background-color: #455ce9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.work1 .left {
+  font-size: 3rem;
+  font-weight: 600;
+}
+.work1 .right {
+  font-size: 1.5rem;
+}
+
+#project {
+  width: 100%;
+  height: 100%;
+  margin: 5rem 0 2rem 0;
+}
+.project-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.projectLine-1 {
+  display: flex;
+  gap: 2rem;
+  position: absolute;
+  right: -300px;
+  flex: 1;
+}
+
+.project {
+  width: 500px;
+  height: 300px;
+  border: 10px solid #e7e7e7;
+  border-radius: 5px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.project1 {
+  background-image: url(./assets/Appointment.png);
+}
+.project2 {
+  background-image: url(./assets/spacex-project.png);
+}
+
+.project3 {
+  background-image: url(./assets/Sidcup.png);
+}
+
+.project4 {
+  background-image: url(./assets/portfolio.png);
+}
+.project5 {
+  background-image: url(./assets/wanderlst.png);
+}
+.projectLine-2 {
+  display: flex;
+  position: absolute;
+  gap: 2rem;
+  bottom: 0;
+  left: -400px;
+}
+
+/* contact section */
+#contact {
+  width: 100%;
+  height: 100%;
+}
+.contact-section {
+  width: 100%;
+  height: 100%;
+  background-color: #1c1d20;
+  color: #e7e7e7;
+}
+.contact-section .pic {
+  background-color: #999d9e;
+  width: 100px;
+  height: 100px;
+  background-image: url(./assets/main_image-transformed.png);
+  border-radius: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.contact-section .h1 {
+  width: 100%;
+  height: 40%;
+  font-size: 4rem;
+  padding-left: 20%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.email,
+.num {
+  padding: 2rem;
+  border: 30px;
+  border-radius: 30px;
+  background-color: #1e1f21;
+  color: white;
+  border: 1px solid #999d9e;
+}
+.email:hover,
+.num:hover {
+  background-color: #455ce9;
+}
+
+.contact-sectionSvg {
+  width: 100%;
+  height: 50%;
+  padding-left: 5rem;
+  position: relative;
+}
+
+.contact-sectionSvg hr {
+  width: 70%;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+}
+
+.contact-sectionSvg svg {
+  position: absolute;
+  bottom: 20%;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 3rem;
+}
+
+.footer ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer ul li {
+  list-style: none;
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Adjust the height of the line as needed */
+  background-color: white;
+  transition: width 0.3s ease-in-out; /* Smooth transition */
+}
+
+.footer ul li:hover::after {
+  width: 100%; /* Expand the line to full width on hover */
 }
