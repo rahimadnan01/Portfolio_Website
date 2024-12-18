@@ -14,37 +14,37 @@ const greetings = [
   "Sup!",
   "Hello, World 🌎",
 ];
-// document.addEventListener("DOMContentLoaded", () => {
-//   const body = document.body;
+document.addEventListener("DOMContentLoaded", () => {
+  const body = document.body;
 
-//   const disableScroll = () => {
-//     body.style.overflow = "hidden";
-//   };
+  const disableScroll = () => {
+    body.style.overflow = "hidden";
+  };
 
-//   const enableScroll = () => {
-//     body.style.overflow = "auto";
-//   };
+  const enableScroll = () => {
+    body.style.overflow = "auto";
+  };
 
-//   let greet_animation = () => {
-//     disableScroll();
+  let greet_animation = () => {
+    disableScroll();
 
-//     greetings.forEach((greeting, index) => {
-//       setTimeout(() => {
-//         start_h1.textContent = greeting;
-//       }, index * 300);
-//     });
+    greetings.forEach((greeting, index) => {
+      setTimeout(() => {
+        start_h1.textContent = greeting;
+      }, index * 300);
+    });
 
-//     gsap.to("#start-page", {
-//       top: "-100%",
-//       delay: 2.2,
-//       duration: 0.5,
-//       ease: "sine.in",
-//       onComplete: enableScroll,
-//     });
-//   };
+    gsap.to("#start-page", {
+      top: "-100%",
+      delay: 2.2,
+      duration: 0.5,
+      ease: "sine.in",
+      onComplete: enableScroll,
+    });
+  };
 
-//   greet_animation();
-// });
+  greet_animation();
+});
 
 navName.addEventListener("mouseenter", () => {
   gsap.to(".nav-text", {
