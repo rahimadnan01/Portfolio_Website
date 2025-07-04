@@ -28,21 +28,29 @@ document.addEventListener("DOMContentLoaded", () => {
   let greet_animation = () => {
     disableScroll();
 
+    if (!start_h1) {
+      console.error(".start-h1 element not found!");
+      enableScroll();
+      return;
+    }
+
     greetings.forEach((greeting, index) => {
       setTimeout(() => {
         start_h1.textContent = greeting;
       }, index * 300);
     });
 
+    // Calculate total time for all greetings to show
+    const totalGreetingTime = greetings.length * 300;
+
     gsap.to("#start-page", {
       top: "-100%",
-      delay: 2.2,
+      delay: totalGreetingTime / 1000, // delay in seconds
       duration: 0.5,
       ease: "sine.in",
       onComplete: enableScroll,
     });
   };
-
   greet_animation();
 });
 
